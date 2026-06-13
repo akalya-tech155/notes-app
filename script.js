@@ -1,8 +1,6 @@
 function addNote() {
     console.log("Add Note");
 }
-
-
 //added new js file based on (search-notes)
 
 function searchNotes() {
@@ -28,4 +26,24 @@ function searchNotes() {
         }
 
     });
+
+
+// add new js code based on (create note)
+
+function addNote() {
+
+    const noteText =
+        document.getElementById("noteInput").value;
+
+    const note =
+        document.createElement("div");
+
+    note.className = "note";
+
+    note.innerText = noteText;
+
+    document
+        .getElementById("notesContainer")
+        .appendChild(note);
+
 }
