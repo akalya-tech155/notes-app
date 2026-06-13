@@ -1,6 +1,12 @@
 function addNote() {
     console.log("Add Note");
 }
+
+
+
+
+// added new js code based on (delete note)
+
 //added new js file based on (search-notes)
 
 function searchNotes() {
@@ -30,6 +36,7 @@ function searchNotes() {
 
 // add new js code based on (create note)
 
+
 function addNote() {
 
     const noteText =
@@ -40,10 +47,18 @@ function addNote() {
 
     note.className = "note";
 
+    note.innerHTML =
+        `${noteText}
+         <button onclick="this.parentElement.remove()">
+            Delete
+         </button>`;
+
     note.innerText = noteText;
+
 
     document
         .getElementById("notesContainer")
         .appendChild(note);
+
 
 }
