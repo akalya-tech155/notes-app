@@ -4,7 +4,38 @@ function addNote() {
 
 
 
+
 // added new js code based on (delete note)
+
+//added new js file based on (search-notes)
+
+function searchNotes() {
+
+    const search =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const notes =
+        document.querySelectorAll(".note");
+
+    notes.forEach(note => {
+
+        if (
+            note.innerText
+            .toLowerCase()
+            .includes(search)
+        ) {
+            note.style.display = "block";
+        } else {
+            note.style.display = "none";
+        }
+
+    });
+
+
+// add new js code based on (create note)
+
 
 function addNote() {
 
@@ -22,7 +53,12 @@ function addNote() {
             Delete
          </button>`;
 
+    note.innerText = noteText;
+
+
     document
         .getElementById("notesContainer")
         .appendChild(note);
+
+
 }
